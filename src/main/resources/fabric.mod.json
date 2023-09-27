@@ -1,28 +1,28 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "btaba",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This mod aims to help new BTA modders.",
+  "name": "BTA Backpacks",
+  "description": "Adds backpacks to Better Than Adventure.",
   "authors": [
-    "Turnip Labs"
+    "ZAppFireCZ(Mirroray41)"
   ],
   "contact": {
-    "homepage": "",
-    "sources": ""
+    "homepage": "https://github.com/Mirroray41/BtaBackpaks",
+    "sources": "https://github.com/Mirroray41/BtaBackpaks"
   },
 
-  "license": "CC0-1.0",
+  "license": "MIT",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-        "turniplabs.examplemod.ExampleMod"
+      "zapp.btaba.BtaBa"
     ]
   },
   "mixins": [
-      "examplemod.mixins.json"
+    "btaba.mixins.json"
   ],
 
   "depends": {

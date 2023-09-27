@@ -24,6 +24,14 @@ repositories {
 		name = 'Fabric'
 		url = 'https://maven.fabricmc.net/'
 	}
+
+	// Used for StationAPI and HowManyItems.
+	maven {
+		name = 'Glass Snapshots'
+		url = 'https://maven.glass-launcher.net/snapshots'
+	}
+
+
 	ivy {
 		url = "https://github.com/Better-than-Adventure"
 		patternLayout {
@@ -72,6 +80,24 @@ repositories {
 		}
 		metadataSources { artifact() }
 	}
+
+	// Used for another StationAPI dependency
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
+		filter {
+			includeGroup "maven.modrinth"
+		}
+	}
+
+	maven {
+		name = 'Froge'
+		url 'https://maven.neoforged.net/'
+	}
 }
 
 dependencies {
@@ -86,6 +112,10 @@ dependencies {
 	modImplementation "com.github.Turnip-Labs:bta-halplibe:${project.halplibe_version}"
 
 	modImplementation "ModMenu:ModMenu:2.0.0"
+
+
+	//modImplementation "net.modificationstation:StationAPI:${project.stapi_version}"
+
 
 	implementation "org.slf4j:slf4j-api:1.8.0-beta4"
 	implementation "org.apache.logging.log4j:log4j-slf4j18-impl:2.16.0"
